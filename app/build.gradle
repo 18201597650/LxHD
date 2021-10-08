@@ -42,8 +42,8 @@ dependencies {
     implementation project(path: ':moudule_hd')
     implementation 'com.github.18201597650.LxFind:module_find:v1.0.1'
     implementation 'com.github.18201597650.LxSuprise:module_suprise:v1.0.1'
-    implementation 'com.github.18201597650.LxFind:export_find:v1.0.1'
-    implementation 'com.github.18201597650.LxSuprise:export_suprise:v1.0.0'
+   // implementation 'com.github.18201597650.LxFind:export_find:v1.0.1'
+   // implementation 'com.github.18201597650.LxSuprise:export_suprise:v1.0.0'
 //    implementation project(path: ':LxFind:module_find')
 //    implementation project(path: ':LxFind:export_find')
 }
