@@ -11,16 +11,15 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.hfy.export_cart.CartServiceUtil;
-import com.hfy.export_cart.router.CartRouterTable;
+import com.example.export_hd.router.HdRouterTable;
 
-@Route(path = "/homepage/homeActivity")
-public class HomeActivity extends AppCompatActivity {
+@Route(path = "/hd/HDActivity")
+public class HDActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_hd);
 
         //跳转到购物车页面
         findViewById(R.id.btn_go_cart).setOnClickListener(new View.OnClickListener() {
@@ -33,20 +32,20 @@ public class HomeActivity extends AppCompatActivity {
 //                        .withString("key2","param2")//携带参数2
 //                        .navigation();
 
-                CartServiceUtil.navigateCartPage("param1", "param1");
+              //  CartServiceUtil.navigateCartPage("param1", "param1");
             }
         });
 
 
         //调用购物车组件服务：获取购物车商品数量
-        TextView tvCartProductCount = findViewById(R.id.tv_cart_product_count);
-        tvCartProductCount.setText("购物车商品数量:"+ CartServiceUtil.getCartProductCount().productCount);
+//        TextView tvCartProductCount = findViewById(R.id.tv_cart_product_count);
+//        tvCartProductCount.setText("购物车商品数量:"+ CartServiceUtil.getCartProductCount().productCount);
 
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction= manager.beginTransaction();
 
-        Fragment userFragment = (Fragment) ARouter.getInstance().build(CartRouterTable.PATH_FRAGMENT_CART).navigation();
+        Fragment userFragment = (Fragment) ARouter.getInstance().build(HdRouterTable.PATH_FRAGMENT_HD).navigation();
         transaction.add(R.id.fl_test_fragment, userFragment, "tag");
         transaction.commit();
     }

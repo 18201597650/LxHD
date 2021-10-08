@@ -1,17 +1,17 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.example.lxhd"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -27,23 +27,13 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //引入本地Common组件、module_cart、module_hd，在app module中独立调试使用
     implementation 'com.github.hufeiyang:Common:1.0.0'
-    implementation 'com.github.hufeiyang.Cart:module_cart:1.0.9'
-
-    implementation project(path: ':moudule_hd')
-    implementation 'com.github.18201597650.LxFind:module_find:v1.0.1'
-    implementation 'com.github.18201597650.LxSuprise:module_suprise:v1.0.1'
-    implementation 'com.github.18201597650.LxFind:export_find:v1.0.1'
-    implementation 'com.github.18201597650.LxSuprise:export_suprise:v1.0.0'
-//    implementation project(path: ':LxFind:module_find')
-//    implementation project(path: ':LxFind:export_find')
 }

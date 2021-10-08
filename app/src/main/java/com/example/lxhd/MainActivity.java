@@ -1,6 +1,7 @@
 package com.example.lxhd;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,9 +15,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //这里进行本地独立调试（每个组件工程的app模块都是用于独立调试）
-
-        //通过路由直接打开home组件的HomeActivity，
-        ARouter.getInstance().build("/homepage/homeActivity").navigation();
-        finish();
+        findViewById(R.id.mBtnJumpHomePage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //通过路由直接打开home组件的HomeActivity，
+                ARouter.getInstance().build("/hd/HDActivity").navigation();
+                finish();
+            }
+        });
     }
 }

@@ -1,2 +1,8 @@
 rootProject.name = "LxHD"
 include ':app'  , ':moudule_hd'
+include ':export_hd'
+
+//include ':LxFind'
+//project(':LxFind').projectDir=new File(settingsDir,'../LxFind/')
+//include ':LxFind:module_find'
+//include ':LxFind:export_find'

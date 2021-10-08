@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.moudule_hd">
     <application>
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".HDActivity"></activity>
+        <activity android:name=".HDDetailActivity"/>
     </application>
 </manifest>

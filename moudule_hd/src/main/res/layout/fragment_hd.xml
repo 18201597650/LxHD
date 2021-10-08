@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="换电fragment"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/mBtnJumpDetail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="跳转到换电详情页面"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/mBtnJumpFindDetail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="跳转到发现详情页面"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/mBtnGetFindData"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取发现模块数据"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/mTvGetContent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/mBtnGetSupriseData"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取惊喜模块数据"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/mTvGetSupriseContent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+</LinearLayout>

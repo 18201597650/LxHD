@@ -42,5 +42,14 @@ dependencies {
     implementation 'com.github.hufeiyang:Common:1.0.0'
 
     //注意这里只依赖export_cart（module_cart由壳工程引入）
-    implementation 'com.github.hufeiyang.Cart:export_cart:1.0.8'
+  //  implementation 'com.github.hufeiyang.Cart:export_cart:1.0.8'
+
+    //implementation project(path:':LxHD:export_hd')
+    implementation project(path:':export_hd')
+   // implementation project(path: ':LxFind:export_find')
+    implementation 'com.github.18201597650.LxFind:export_find:v1.0.1'
+    implementation 'com.github.18201597650.LxSuprise:export_suprise:v1.0.0'
+
+//    implementation project(path:':export_hd')
+//    implementation project(path: ':LxFind:export_find')
 }

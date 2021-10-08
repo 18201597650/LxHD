@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HDActivity">
 
     <TextView
         android:id="@+id/tv_page_name"
@@ -14,7 +14,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="这里是首页"/>
+        android:text="换电Fragment"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/btn_go_cart"
@@ -24,26 +25,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_page_name"
-        android:text="去购物车"/>
+        android:text="跳转到发现Fragment"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/tv_cart_product_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="购物车商品数量"
+        android:text="获取发现Fragment里面数据"
         app:layout_constraintBottom_toTopOf="@id/fl_test_fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_go_cart" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_cart"
+         android:visibility="gone"/>
 
     <FrameLayout
         android:id="@+id/fl_test_fragment"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_cart_product_count"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:background="#009999"/>
+        android:background="#ffffff"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
